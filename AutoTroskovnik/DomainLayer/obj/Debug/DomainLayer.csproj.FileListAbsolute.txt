@@ -1,0 +1,6 @@
+C:\Users\Eni\Desktop\auto-troskovnik-v2\auto-troskovnik\AutoTroskovnik\DomainLayer\bin\Debug\DomainLayer.dll
+C:\Users\Eni\Desktop\auto-troskovnik-v2\auto-troskovnik\AutoTroskovnik\DomainLayer\bin\Debug\DomainLayer.pdb
+C:\Users\Eni\Desktop\auto-troskovnik-v2\auto-troskovnik\AutoTroskovnik\DomainLayer\obj\Debug\DomainLayer.csprojAssemblyReference.cache
+C:\Users\Eni\Desktop\auto-troskovnik-v2\auto-troskovnik\AutoTroskovnik\DomainLayer\obj\Debug\DomainLayer.csproj.CoreCompileInputs.cache
+C:\Users\Eni\Desktop\auto-troskovnik-v2\auto-troskovnik\AutoTroskovnik\DomainLayer\obj\Debug\DomainLayer.dll
+C:\Users\Eni\Desktop\auto-troskovnik-v2\auto-troskovnik\AutoTroskovnik\DomainLayer\obj\Debug\DomainLayer.pdb

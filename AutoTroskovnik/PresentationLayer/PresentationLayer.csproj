@@ -1,0 +1,321 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8D945250-11F6-483D-A455-9339C210FBD4}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>PresentationLayer</RootNamespace>
+    <AssemblyName>PresentationLayer</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <ContentSQLiteInteropFiles>true</ContentSQLiteInteropFiles>
+    <CopySQLiteInteropFiles>false</CopySQLiteInteropFiles>
+    <CleanSQLiteInteropFiles>false</CleanSQLiteInteropFiles>
+    <CollectSQLiteInteropFiles>false</CollectSQLiteInteropFiles>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="LiveCharts, Version=0.9.7.0, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
+      <HintPath>..\packages\LiveCharts.0.9.7\lib\net45\LiveCharts.dll</HintPath>
+    </Reference>
+    <Reference Include="LiveCharts.WinForms, Version=0.9.7.1, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
+      <HintPath>..\packages\LiveCharts.WinForms.0.9.7.1\lib\net45\LiveCharts.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="LiveCharts.Wpf, Version=0.9.7.0, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
+      <HintPath>..\packages\LiveCharts.Wpf.0.9.7\lib\net45\LiveCharts.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.5.2\lib\netstandard1.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Unity.Abstractions, Version=5.11.1.0, Culture=neutral, PublicKeyToken=489b6accfaf20ef0, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unity.5.11.1\lib\net46\Unity.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Container, Version=5.11.1.0, Culture=neutral, PublicKeyToken=489b6accfaf20ef0, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unity.5.11.1\lib\net46\Unity.Container.dll</HintPath>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Presenters\IRootPresenter.cs" />
+    <Compile Include="Presenters\RootPresenter.cs" />
+    <Compile Include="Presenters\Common\FormHelper.cs" />
+    <Compile Include="Presenters\Common\ISession.cs" />
+    <Compile Include="Presenters\Common\Session.cs" />
+    <Compile Include="Presenters\IMainPresenter.cs" />
+    <Compile Include="Presenters\MainPresenter.cs" />
+    <Compile Include="Presenters\UserControls\ExpenseStatisticsPresenter.cs" />
+    <Compile Include="Presenters\UserControls\ExpenseTypeListPresenter.cs" />
+    <Compile Include="Presenters\UserControls\ExpenseListPresenter.cs" />
+    <Compile Include="Presenters\UserControls\HeaderViewPresenter.cs" />
+    <Compile Include="Presenters\UserControls\IExpenseListPresenter.cs" />
+    <Compile Include="Presenters\UserControls\IExpenseStatisticsPresenter.cs" />
+    <Compile Include="Presenters\UserControls\IExpenseTypeListPresenter.cs" />
+    <Compile Include="Presenters\UserControls\IHeaderViewPresenter.cs" />
+    <Compile Include="Presenters\UserControls\ILoginPresenter.cs" />
+    <Compile Include="Presenters\UserControls\IRegistrationPresenter.cs" />
+    <Compile Include="Presenters\UserControls\LoginPresenter.cs" />
+    <Compile Include="Presenters\UserControls\RegistrationPresenter.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Views\ErrorMessageView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\ErrorMessageView.Designer.cs">
+      <DependentUpon>ErrorMessageView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ExpenseDeleteView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\ExpenseDeleteView.Designer.cs">
+      <DependentUpon>ExpenseDeleteView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ExpenseEditView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\ExpenseEditView.Designer.cs">
+      <DependentUpon>ExpenseEditView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ExpenseTypeAddView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\ExpenseTypeAddView.Designer.cs">
+      <DependentUpon>ExpenseTypeAddView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ExpenseTypeDeleteView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\ExpenseTypeDeleteView.Designer.cs">
+      <DependentUpon>ExpenseTypeDeleteView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ExpenseTypeEditView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\ExpenseTypeEditView.Designer.cs">
+      <DependentUpon>ExpenseTypeEditView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\IErrorMessageView.cs" />
+    <Compile Include="Views\IExpenseAddView.cs" />
+    <Compile Include="Views\IExpenseDeleteView.cs" />
+    <Compile Include="Views\IExpenseEditView.cs" />
+    <Compile Include="Views\IExpenseTypeAddView.cs" />
+    <Compile Include="Views\IExpenseTypeDeleteView.cs" />
+    <Compile Include="Views\IExpenseTypeEditView.cs" />
+    <Compile Include="Views\UserControls\IMainViewUC.cs" />
+    <Compile Include="Views\IRootView.cs" />
+    <Compile Include="Views\UserControls\MainViewUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\UserControls\MainViewUC.Designer.cs">
+      <DependentUpon>MainViewUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\RootView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\RootView.Designer.cs">
+      <DependentUpon>RootView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserControls\BaseUserControlUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\UserControls\BaseUserControlUC.Designer.cs">
+      <DependentUpon>BaseUserControlUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ExpenseAddView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\ExpenseAddView.Designer.cs">
+      <DependentUpon>ExpenseAddView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserControls\ExpenseListViewUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\UserControls\ExpenseListViewUC.Designer.cs">
+      <DependentUpon>ExpenseListViewUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserControls\ExpenseStatisticsViewUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\UserControls\ExpenseStatisticsViewUC.Designer.cs">
+      <DependentUpon>ExpenseStatisticsViewUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserControls\ExpenseTypeListViewUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\UserControls\ExpenseTypeListViewUC.Designer.cs">
+      <DependentUpon>ExpenseTypeListViewUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserControls\HeaderViewUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\UserControls\HeaderViewUC.Designer.cs">
+      <DependentUpon>HeaderViewUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserControls\IExpenseListViewUC.cs" />
+    <Compile Include="Views\UserControls\IExpenseStatisticsViewUC.cs" />
+    <Compile Include="Views\UserControls\IExpenseTypeListViewUC.cs" />
+    <Compile Include="Views\UserControls\IHeaderViewUC.cs" />
+    <Compile Include="Views\UserControls\ILoginViewUC.cs" />
+    <Compile Include="Views\UserControls\IRegistrationViewUC.cs" />
+    <Compile Include="Views\UserControls\LoginViewUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\UserControls\LoginViewUC.Designer.cs">
+      <DependentUpon>LoginViewUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserControls\RegistrationViewUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\UserControls\RegistrationViewUC.Designer.cs">
+      <DependentUpon>RegistrationViewUC.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Views\ErrorMessageView.resx">
+      <DependentUpon>ErrorMessageView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ExpenseDeleteView.resx">
+      <DependentUpon>ExpenseDeleteView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ExpenseEditView.resx">
+      <DependentUpon>ExpenseEditView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ExpenseTypeAddView.resx">
+      <DependentUpon>ExpenseTypeAddView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ExpenseTypeDeleteView.resx">
+      <DependentUpon>ExpenseTypeDeleteView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ExpenseTypeEditView.resx">
+      <DependentUpon>ExpenseTypeEditView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\UserControls\MainViewUC.resx">
+      <DependentUpon>MainViewUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ExpenseAddView.resx">
+      <DependentUpon>ExpenseAddView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\RootView.resx">
+      <DependentUpon>RootView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\UserControls\BaseUserControlUC.resx">
+      <DependentUpon>BaseUserControlUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\UserControls\ExpenseListViewUC.resx">
+      <DependentUpon>ExpenseListViewUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\UserControls\ExpenseStatisticsViewUC.resx">
+      <DependentUpon>ExpenseStatisticsViewUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\UserControls\ExpenseTypeListViewUC.resx">
+      <DependentUpon>ExpenseTypeListViewUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\UserControls\HeaderViewUC.resx">
+      <DependentUpon>HeaderViewUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\UserControls\LoginViewUC.resx">
+      <DependentUpon>LoginViewUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\UserControls\RegistrationViewUC.resx">
+      <DependentUpon>RegistrationViewUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Menu_Of_3_Dots.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MoreOptionsBlackDotsOnWhite20x20.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UserIconWhiteSpheres.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CommonComponents\CommonComponents.csproj">
+      <Project>{546c8875-b19a-4eaa-83b7-dc4e3bed3bcc}</Project>
+      <Name>CommonComponents</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DomainLayer\DomainLayer.csproj">
+      <Project>{c0ee3f4a-ac52-4808-8570-9c75e124cb59}</Project>
+      <Name>DomainLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\InfrastructureLayer\InfrastructureLayer.csproj">
+      <Project>{dc6eecf8-a01a-4fab-9481-55ac91bc4d69}</Project>
+      <Name>InfrastructureLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ServiceLayer\ServiceLayer.csproj">
+      <Project>{c8f22182-5456-4ca6-b55b-5e8bf0fa50f4}</Project>
+      <Name>ServiceLayer</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="..\InfrastructureLayer\x64\SQLite.Interop.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\InfrastructureLayer\x64\SQLite.Interop.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="Resources\edit.png" />
+    <None Include="Resources\delete.png" />
+    <None Include="Resources\add_white.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

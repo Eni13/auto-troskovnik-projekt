@@ -1,0 +1,6 @@
+C:\Users\Eni\Desktop\auto-troskovnik-v2\auto-troskovnik\AutoTroskovnik\CommonComponents\bin\Debug\CommonComponents.dll
+C:\Users\Eni\Desktop\auto-troskovnik-v2\auto-troskovnik\AutoTroskovnik\CommonComponents\bin\Debug\CommonComponents.pdb
+C:\Users\Eni\Desktop\auto-troskovnik-v2\auto-troskovnik\AutoTroskovnik\CommonComponents\obj\Debug\CommonComponents.csprojAssemblyReference.cache
+C:\Users\Eni\Desktop\auto-troskovnik-v2\auto-troskovnik\AutoTroskovnik\CommonComponents\obj\Debug\CommonComponents.csproj.CoreCompileInputs.cache
+C:\Users\Eni\Desktop\auto-troskovnik-v2\auto-troskovnik\AutoTroskovnik\CommonComponents\obj\Debug\CommonComponents.dll
+C:\Users\Eni\Desktop\auto-troskovnik-v2\auto-troskovnik\AutoTroskovnik\CommonComponents\obj\Debug\CommonComponents.pdb
