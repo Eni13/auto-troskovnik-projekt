@@ -26,7 +26,7 @@ namespace PresentationLayer
         static void Main()
         {
             // EDIT: path to sqlite file (root of the project)
-            string pathToSqliteFile = "C:/Users/Eni/Desktop/auto-troskovnik-v2/auto-troskovnik/AutoTroskovnik";
+            string pathToSqliteFile = "C:/Users/Eni/Desktop/auto-troskovnik-projekt/AutoTroskovnik";
 
 
             IUnityContainer UnityC;
